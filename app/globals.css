@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 244 248 251;
+    --foreground: 17 24 39;
+    --border: 229 231 235;
+    --primary: 15 61 94;
+    --primary-dark: 10 42 66;
+    --primary-light: 29 92 143;
+    --secondary: 29 92 143;
+    --secondary-dark: 22 81 121;
+    --secondary-light: 43 111 168;
+    --accent: 79 179 255;
+    --accent-dark: 58 159 235;
+    --accent-light: 107 194 255;
+  }
+
+  body {
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+  }
+}
+
+@layer utilities {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
