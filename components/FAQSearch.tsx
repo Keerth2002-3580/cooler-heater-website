@@ -125,7 +125,7 @@ export default function FAQSearch() {
           <div className="bg-gradient-to-br from-primary to-primary-light text-white rounded-2xl shadow-md p-8 text-center">
             <h2 className="text-2xl font-bold mb-4">Still Have Questions?</h2>
             <p className="text-lg mb-6 text-gray-100">
-              Can't find what you're looking for? Our team is here to help
+              Can&apos;t find what you&apos;re looking for? Our team is here to help
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="/contact">
