@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import TopBar from "@/components/TopBar";
+import PremiumHeader from "@/components/PremiumHeader";
+import PremiumFooter from "@/components/PremiumFooter";
+
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: '--font-inter',
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: '--font-display',
+});
 
 export const metadata: Metadata = {
-  title: "Ravique Climate - Premium Cooling & Heating Solutions",
-  description: "Professional cooling and heating systems for homes and businesses in London",
+  title: "Ravique Climate - Premium Climate Control Solutions",
+  description: "Transform your space with premium cooling and heating systems. Energy-efficient, smart, and designed for modern living.",
 };
 
 export default function RootLayout({
@@ -15,12 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="antialiased">
-        <TopBar />
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+    <html lang="en" className={`${inter.variable} ${plusJakarta.variable}`}>
+      <body className={`${inter.className} antialiased`}>
+        <PremiumHeader />
+        {children}
+        <PremiumFooter />
       </body>
     </html>
   );
